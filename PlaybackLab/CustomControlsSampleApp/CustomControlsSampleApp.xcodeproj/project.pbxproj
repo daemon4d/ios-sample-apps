@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B8F51D082108EFE100B6F21A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D072108EFE100B6F21A /* AppDelegate.swift */; };
+		B8F51D0D2108EFE100B6F21A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D0B2108EFE100B6F21A /* Main.storyboard */; };
+		B8F51D0F2108EFE200B6F21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D0E2108EFE200B6F21A /* Assets.xcassets */; };
+		B8F51D122108EFE200B6F21A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D102108EFE200B6F21A /* LaunchScreen.storyboard */; };
+		B8F51D1D2108F19C00B6F21A /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8F51D1C2108F19C00B6F21A /* OoyalaSDK.framework */; };
+		B8F51D202108F1C100B6F21A /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D1F2108F1C100B6F21A /* PlayerSelectionOption.swift */; };
+		B8F51D232108F20B00B6F21A /* BasicEmbedTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D222108F20B00B6F21A /* BasicEmbedTokenGenerator.swift */; };
+		B8F51D252108F24200B6F21A /* OptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D242108F24200B6F21A /* OptionDataSource.swift */; };
+		B8F51D2A2108F32E00B6F21A /* AssetListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D292108F32E00B6F21A /* AssetListTableViewController.swift */; };
+		B8F51D2C2108F44C00B6F21A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D2B2108F44C00B6F21A /* PlayerViewController.swift */; };
+		B8F51D2F210901DF00B6F21A /* CustomControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D2E210901DF00B6F21A /* CustomControlsViewController.swift */; };
+		B8F51D352109054600B6F21A /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D342109054600B6F21A /* CustomControls.swift */; };
+		B8F51D3E21090FFA00B6F21A /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3821090FFA00B6F21A /* RobotoCondensed-Regular.ttf */; };
+		B8F51D3F21090FFA00B6F21A /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3921090FFA00B6F21A /* Roboto-Bold.ttf */; };
+		B8F51D4021090FFA00B6F21A /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3A21090FFA00B6F21A /* ooyala-slick-type.ttf */; };
+		B8F51D4121090FFA00B6F21A /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3B21090FFA00B6F21A /* alice.ttf */; };
+		B8F51D4221090FFA00B6F21A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3C21090FFA00B6F21A /* Roboto-Regular.ttf */; };
+		B8F51D4321090FFA00B6F21A /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3D21090FFA00B6F21A /* RobotoCondensed-Bold.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B8F51D042108EFE100B6F21A /* CustomControlsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomControlsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F51D072108EFE100B6F21A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8F51D0C2108EFE100B6F21A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8F51D0E2108EFE200B6F21A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8F51D112108EFE200B6F21A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8F51D132108EFE200B6F21A /* CustomControlsSampleApp.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CustomControlsSampleApp.plist; sourceTree = "<group>"; };
+		B8F51D1A2108F0E200B6F21A /* CustomControlsSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomControlsSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		B8F51D1C2108F19C00B6F21A /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
+		B8F51D1F2108F1C100B6F21A /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
+		B8F51D222108F20B00B6F21A /* BasicEmbedTokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEmbedTokenGenerator.swift; sourceTree = "<group>"; };
+		B8F51D242108F24200B6F21A /* OptionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDataSource.swift; sourceTree = "<group>"; };
+		B8F51D292108F32E00B6F21A /* AssetListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListTableViewController.swift; sourceTree = "<group>"; };
+		B8F51D2B2108F44C00B6F21A /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		B8F51D2E210901DF00B6F21A /* CustomControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlsViewController.swift; sourceTree = "<group>"; };
+		B8F51D342109054600B6F21A /* CustomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
+		B8F51D3821090FFA00B6F21A /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		B8F51D3921090FFA00B6F21A /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B8F51D3A21090FFA00B6F21A /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ooyala-slick-type.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		B8F51D3B21090FFA00B6F21A /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alice.ttf; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/alice.ttf"; sourceTree = "<group>"; };
+		B8F51D3C21090FFA00B6F21A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		B8F51D3D21090FFA00B6F21A /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8F51D012108EFE100B6F21A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F51D1D2108F19C00B6F21A /* OoyalaSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B8F51CFB2108EFE100B6F21A = {
+			isa = PBXGroup;
+			children = (
+				B8F51D062108EFE100B6F21A /* CustomControlsSampleApp */,
+				B8F51D052108EFE100B6F21A /* Products */,
+				B8F51D1B2108F19C00B6F21A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B8F51D052108EFE100B6F21A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D042108EFE100B6F21A /* CustomControlsSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8F51D062108EFE100B6F21A /* CustomControlsSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D3621090F5300B6F21A /* Resources */,
+				B8F51D1E2108F1B200B6F21A /* Models */,
+				B8F51D192108F08900B6F21A /* SupportFiles */,
+				B8F51D212108F1FC00B6F21A /* Utils */,
+				B8F51D262108F2BF00B6F21A /* Views */,
+			);
+			path = CustomControlsSampleApp;
+			sourceTree = "<group>";
+		};
+		B8F51D192108F08900B6F21A /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D1A2108F0E200B6F21A /* CustomControlsSampleApp-Bridging-Header.h */,
+				B8F51D132108EFE200B6F21A /* CustomControlsSampleApp.plist */,
+				B8F51D072108EFE100B6F21A /* AppDelegate.swift */,
+				B8F51D0E2108EFE200B6F21A /* Assets.xcassets */,
+				B8F51D102108EFE200B6F21A /* LaunchScreen.storyboard */,
+				B8F51D0B2108EFE100B6F21A /* Main.storyboard */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		B8F51D1B2108F19C00B6F21A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D1C2108F19C00B6F21A /* OoyalaSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8F51D1E2108F1B200B6F21A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D1F2108F1C100B6F21A /* PlayerSelectionOption.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B8F51D212108F1FC00B6F21A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D222108F20B00B6F21A /* BasicEmbedTokenGenerator.swift */,
+				B8F51D242108F24200B6F21A /* OptionDataSource.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B8F51D262108F2BF00B6F21A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D2D210901D000B6F21A /* CustomControls */,
+				B8F51D292108F32E00B6F21A /* AssetListTableViewController.swift */,
+				B8F51D2B2108F44C00B6F21A /* PlayerViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B8F51D2D210901D000B6F21A /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D2E210901DF00B6F21A /* CustomControlsViewController.swift */,
+				B8F51D342109054600B6F21A /* CustomControls.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		B8F51D3621090F5300B6F21A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D3721090F5D00B6F21A /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B8F51D3721090F5D00B6F21A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51D3B21090FFA00B6F21A /* alice.ttf */,
+				B8F51D3A21090FFA00B6F21A /* ooyala-slick-type.ttf */,
+				B8F51D3921090FFA00B6F21A /* Roboto-Bold.ttf */,
+				B8F51D3C21090FFA00B6F21A /* Roboto-Regular.ttf */,
+				B8F51D3D21090FFA00B6F21A /* RobotoCondensed-Bold.ttf */,
+				B8F51D3821090FFA00B6F21A /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8F51D032108EFE100B6F21A /* CustomControlsSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8F51D162108EFE200B6F21A /* Build configuration list for PBXNativeTarget "CustomControlsSampleApp" */;
+			buildPhases = (
+				B8F51D002108EFE100B6F21A /* Sources */,
+				B8F51D012108EFE100B6F21A /* Frameworks */,
+				B8F51D022108EFE100B6F21A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomControlsSampleApp;
+			productName = CustomControlsSampleApp;
+			productReference = B8F51D042108EFE100B6F21A /* CustomControlsSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8F51CFC2108EFE100B6F21A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Ooyala;
+				TargetAttributes = {
+					B8F51D032108EFE100B6F21A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = B8F51CFF2108EFE100B6F21A /* Build configuration list for PBXProject "CustomControlsSampleApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8F51CFB2108EFE100B6F21A;
+			productRefGroup = B8F51D052108EFE100B6F21A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8F51D032108EFE100B6F21A /* CustomControlsSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8F51D022108EFE100B6F21A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F51D4121090FFA00B6F21A /* alice.ttf in Resources */,
+				B8F51D122108EFE200B6F21A /* LaunchScreen.storyboard in Resources */,
+				B8F51D4221090FFA00B6F21A /* Roboto-Regular.ttf in Resources */,
+				B8F51D4321090FFA00B6F21A /* RobotoCondensed-Bold.ttf in Resources */,
+				B8F51D0F2108EFE200B6F21A /* Assets.xcassets in Resources */,
+				B8F51D3F21090FFA00B6F21A /* Roboto-Bold.ttf in Resources */,
+				B8F51D3E21090FFA00B6F21A /* RobotoCondensed-Regular.ttf in Resources */,
+				B8F51D4021090FFA00B6F21A /* ooyala-slick-type.ttf in Resources */,
+				B8F51D0D2108EFE100B6F21A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8F51D002108EFE100B6F21A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F51D232108F20B00B6F21A /* BasicEmbedTokenGenerator.swift in Sources */,
+				B8F51D082108EFE100B6F21A /* AppDelegate.swift in Sources */,
+				B8F51D252108F24200B6F21A /* OptionDataSource.swift in Sources */,
+				B8F51D2A2108F32E00B6F21A /* AssetListTableViewController.swift in Sources */,
+				B8F51D202108F1C100B6F21A /* PlayerSelectionOption.swift in Sources */,
+				B8F51D2F210901DF00B6F21A /* CustomControlsViewController.swift in Sources */,
+				B8F51D352109054600B6F21A /* CustomControls.swift in Sources */,
+				B8F51D2C2108F44C00B6F21A /* PlayerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B8F51D0B2108EFE100B6F21A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8F51D0C2108EFE100B6F21A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8F51D102108EFE200B6F21A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8F51D112108EFE200B6F21A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8F51D142108EFE200B6F21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8F51D152108EFE200B6F21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8F51D172108EFE200B6F21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/VendorLibraries";
+				INFOPLIST_FILE = CustomControlsSampleApp/SupportFiles/CustomControlsSampleApp.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.CustomControlsSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomControlsSampleApp/SupportFiles/CustomControlsSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8F51D182108EFE200B6F21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/VendorLibraries";
+				INFOPLIST_FILE = CustomControlsSampleApp/SupportFiles/CustomControlsSampleApp.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.CustomControlsSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomControlsSampleApp/SupportFiles/CustomControlsSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8F51CFF2108EFE100B6F21A /* Build configuration list for PBXProject "CustomControlsSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F51D142108EFE200B6F21A /* Debug */,
+				B8F51D152108EFE200B6F21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8F51D162108EFE200B6F21A /* Build configuration list for PBXNativeTarget "CustomControlsSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F51D172108EFE200B6F21A /* Debug */,
+				B8F51D182108EFE200B6F21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8F51CFC2108EFE100B6F21A /* Project object */;
+}
