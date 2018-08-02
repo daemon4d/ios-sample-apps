@@ -25,6 +25,8 @@
 		B8F51D4121090FFA00B6F21A /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3B21090FFA00B6F21A /* alice.ttf */; };
 		B8F51D4221090FFA00B6F21A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3C21090FFA00B6F21A /* Roboto-Regular.ttf */; };
 		B8F51D4321090FFA00B6F21A /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D3D21090FFA00B6F21A /* RobotoCondensed-Bold.ttf */; };
+		B8FA3AD22110DD7E004C6D7F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA3AD12110DD7E004C6D7F /* UIImage.swift */; };
+		B8FA3AD82111116F004C6D7F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA3AD72111116F004C6D7F /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		B8F51D3B21090FFA00B6F21A /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alice.ttf; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/alice.ttf"; sourceTree = "<group>"; };
 		B8F51D3C21090FFA00B6F21A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		B8F51D3D21090FFA00B6F21A /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		B8FA3AD12110DD7E004C6D7F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		B8FA3AD72111116F004C6D7F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 			children = (
 				B8F51D222108F20B00B6F21A /* BasicEmbedTokenGenerator.swift */,
 				B8F51D242108F24200B6F21A /* OptionDataSource.swift */,
+				B8FA3AD12110DD7E004C6D7F /* UIImage.swift */,
+				B8FA3AD72111116F004C6D7F /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -252,7 +258,9 @@
 				B8F51D252108F24200B6F21A /* OptionDataSource.swift in Sources */,
 				B8F51D2A2108F32E00B6F21A /* AssetListTableViewController.swift in Sources */,
 				B8F51D202108F1C100B6F21A /* PlayerSelectionOption.swift in Sources */,
+				B8FA3AD82111116F004C6D7F /* Utils.swift in Sources */,
 				B8F51D2F210901DF00B6F21A /* CustomControlsViewController.swift in Sources */,
+				B8FA3AD22110DD7E004C6D7F /* UIImage.swift in Sources */,
 				B8F51D352109054600B6F21A /* CustomControls.swift in Sources */,
 				B8F51D2C2108F44C00B6F21A /* PlayerViewController.swift in Sources */,
 			);

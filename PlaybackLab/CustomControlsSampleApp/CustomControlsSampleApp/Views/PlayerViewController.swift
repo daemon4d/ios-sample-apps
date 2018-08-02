@@ -22,6 +22,7 @@ class PlayerViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    title = option.title
     
     var player: OOOoyalaPlayer!
     if option.embedTokenGenerator != nil {
@@ -56,11 +57,12 @@ class PlayerViewController: UIViewController {
                               domain: option.domain)
     }
     player.setEmbedCode(option.embedCode)
+    player.volume = 0
     ooyalaPlayerViewController = OOOoyalaPlayerViewController(player: player)
     ooyalaPlayerViewController.setInline(CustomControlsViewController(controlsType: .inline,
                                                                       player: player,
                                                                       overlay: nil,
-                                                                      delegate: self))
+                                                                      delegate: ooyalaPlayerViewController))
     
     addChildViewController(ooyalaPlayerViewController)
     player.view.frame = playerView.bounds

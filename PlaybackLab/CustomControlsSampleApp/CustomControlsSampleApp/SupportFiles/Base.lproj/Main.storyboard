@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,24 +53,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGS-d1-HRK">
-                                <rect key="frame" x="27.5" y="84" width="320" height="240"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NZ3-Ge-H7h">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="VWW-co-VCq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="344.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3Q-Mj-DlV">
+                                        <rect key="frame" x="0.0" y="344.5" width="375" height="258.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="6LA-XU-V5S"/>
-                                    <constraint firstAttribute="height" constant="240" id="TsB-cK-KJL"/>
+                                    <constraint firstItem="VWW-co-VCq" firstAttribute="height" secondItem="k3Q-Mj-DlV" secondAttribute="height" multiplier="4:3" id="TIl-NJ-WGe"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sGS-d1-HRK" firstAttribute="centerX" secondItem="iEN-2F-zoX" secondAttribute="centerX" id="dh3-Wl-Pad"/>
-                            <constraint firstItem="sGS-d1-HRK" firstAttribute="top" secondItem="pjd-0g-uPg" secondAttribute="top" constant="20" id="pD5-UR-d00"/>
+                            <constraint firstItem="NZ3-Ge-H7h" firstAttribute="leading" secondItem="pjd-0g-uPg" secondAttribute="leading" id="D4i-t1-KXg"/>
+                            <constraint firstItem="pjd-0g-uPg" firstAttribute="bottom" secondItem="NZ3-Ge-H7h" secondAttribute="bottom" id="HSG-Wb-9to"/>
+                            <constraint firstItem="pjd-0g-uPg" firstAttribute="trailing" secondItem="NZ3-Ge-H7h" secondAttribute="trailing" id="PRs-gg-nsc"/>
+                            <constraint firstItem="NZ3-Ge-H7h" firstAttribute="top" secondItem="pjd-0g-uPg" secondAttribute="top" id="pTK-ZX-J7Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pjd-0g-uPg"/>
                     </view>
                     <connections>
-                        <outlet property="playerView" destination="sGS-d1-HRK" id="ge4-ll-yJR"/>
+                        <outlet property="playerView" destination="VWW-co-VCq" id="IHe-GG-4ss"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMU-Hg-bP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
