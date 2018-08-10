@@ -17,7 +17,8 @@ class CustomControlsViewController: OOControlsViewController {
     }
   }
   
-  private var updateSlider = true
+  private let interval = 0.5
+  private var timerScrubber: Timer!
   
   override init(controlsType: OOOoyalaPlayerControlType, player: OOOoyalaPlayer!, overlay: UIView!, delegate: Any!) {
     super.init(controlsType: controlsType, player: player, overlay: overlay, delegate: delegate)
@@ -44,11 +45,14 @@ class CustomControlsViewController: OOControlsViewController {
       return
     }
     
+    
     controls = CustomControls(frame: view.bounds, controlsType: controlsType)
     
+    timerScrubber = Timer.scheduledTimer(timeInterval: TimeInterval(interval), target: self, selector: #selector(updateSliderTime), userInfo: nil, repeats: true)
     customControls.playPause.addTarget(self, action: #selector(playPause), for: .touchDown)
-    customControls.sliderTime.addTarget(self, action: #selector(sliderValueChanged(_:event:)), for: .valueChanged)
     customControls.fullscreen.addTarget(self, action: #selector(fullscreen), for: .touchDown)
+    customControls.sliderTime.addTarget(self, action: #selector(updateSliderTime), for: .allEvents)
+    
     
     super.viewDidLoad()
   }
@@ -85,21 +89,20 @@ class CustomControlsViewController: OOControlsViewController {
         self.customControls.title.text = self.player.currentItem?.title
         
         if self.customControls.sliderTime.maximumValue == 0 {
-          self.customControls.sliderTime.minimumValue = 0
+          self.customControls.sliderTime.minimumValue = 0.0
           self.customControls.sliderTime.maximumValue = Float(self.player.duration())
+          
+          self.customControls.playheadTime.text = "\(Utils.stringFromTimeInterval(interval: self.player.playheadTime())) - \(Utils.stringFromTimeInterval(interval: self.player.duration()))"
+          self.customControls.playheadTime.sizeToFit()
         }
-
-       //
         
-        self.customControls.playheadTime.text = "\(Utils.stringFromTimeInterval(interval: self.player.playheadTime())) - \(Utils.stringFromTimeInterval(interval: self.player.duration()))"
-        self.customControls.playheadTime.sizeToFit()
       }
       switch player.state() {
+      case .ready:
+        timerScrubber.fire()
+        break
       case .playing:
         DispatchQueue.main.async {
-          if self.updateSlider {
-            self.customControls.sliderTime.value = Float(self.player.playheadTime())
-          }
           self.customControls.playPause.setTitle("g", for: .normal)
         }
         break
@@ -120,6 +123,16 @@ class CustomControlsViewController: OOControlsViewController {
   }
   
   @objc
+  private func updateSliderTime(){
+    self.customControls.sliderTime.value = Float(self.player.playheadTime())
+  }
+  
+  @objc
+  private func touchSliderTime(_ slider: UISlider!, event: UIEvent!){
+    
+  }
+  
+  @objc
   private func playerTimeChanged(){
     if player != nil && controls != nil {
       DispatchQueue.main.async {
@@ -136,46 +149,6 @@ class CustomControlsViewController: OOControlsViewController {
     }
     else {
       player.play()
-    }
-  }
-  
-  @objc
-  private func sliderValueChanged(_ sender: UISlider, event: UIEvent){
-    if player != nil && controls != nil {
-      if let touchEvent = event.allTouches?.first {
-        switch touchEvent.phase {
-        case .began:
-          print("phase : began")
-          player.pause()
-          updateSlider = false
-          break
-        case .ended:
-          print("phase : ended ")
-          updateSlider = true
-          player.seek(Float64(sender.value))
-          player.play()
-          break
-        default:
-          //print("phase : \(touchEvent.phase)")
-          break
-        }
-      }
-     
-   /*   if let touchEvent = event.allTouches?.first {
-        print("values: \(touchEvent.phase)")
-
-        switch touchEvent.phase {
-        case .ended:
-          print("values: \(Float64(sender.value))")
-          player.seek(Float64(sender.value))
-          updateSlider = true
-          break
-        default:
-          updateSlider = false
-          break
-        }
-      }*/
-      
     }
   }
   

@@ -8,14 +8,14 @@
 import UIKit
 
 struct Utils {
-  static func stringFromTimeInterval(interval: Float64) -> String {
+  static func stringFromTimeInterval(interval: Double) -> String {
     let formatter = DateComponentsFormatter()
-    formatter.allowedUnits = [.second, .minute, .hour]
+    formatter.allowedUnits = [.nanosecond, .second, .minute, .hour]
     formatter.zeroFormattingBehavior = .pad
     let output = formatter.string(from: TimeInterval(interval))!
     //return Int(interval) < 3600 ? output.substring(from: output.range(of: ":")!.upperBound) : output
     
-    return Int(interval) < 3600 ? String(output[output.range(of: ":")!.upperBound...]) : output
+    return interval < Double(3600) ? String(output[output.range(of: ":")!.upperBound...]) : output
   }
 }
 
