@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B84B827E212114C500A3A552 /* OoyalaCastSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B827C212114C400A3A552 /* OoyalaCastSDK.framework */; };
+		B84B82822121151000A3A552 /* OOCastManagerFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B82812121151000A3A552 /* OOCastManagerFetcher.swift */; };
+		B84B8296212118C900A3A552 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8283212118C700A3A552 /* libstdc++.tbd */; };
+		B84B8297212118C900A3A552 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8284212118C800A3A552 /* CFNetwork.framework */; };
+		B84B8298212118C900A3A552 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8285212118C800A3A552 /* libz.tbd */; };
+		B84B8299212118C900A3A552 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8286212118C800A3A552 /* Security.framework */; };
+		B84B829A212118C900A3A552 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8287212118C800A3A552 /* CoreMedia.framework */; };
+		B84B829B212118C900A3A552 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8288212118C800A3A552 /* Foundation.framework */; };
+		B84B829C212118C900A3A552 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8289212118C800A3A552 /* MediaPlayer.framework */; };
+		B84B829D212118C900A3A552 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B828A212118C800A3A552 /* AVKit.framework */; };
+		B84B829E212118C900A3A552 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B828B212118C800A3A552 /* MediaAccessibility.framework */; };
+		B84B829F212118C900A3A552 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B828C212118C800A3A552 /* SystemConfiguration.framework */; };
+		B84B82A0212118C900A3A552 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B828D212118C800A3A552 /* Social.framework */; };
+		B84B82A1212118C900A3A552 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B828E212118C800A3A552 /* CoreText.framework */; };
+		B84B82A2212118C900A3A552 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B828F212118C800A3A552 /* libxml2.tbd */; };
+		B84B82A3212118C900A3A552 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8290212118C900A3A552 /* AdSupport.framework */; };
+		B84B82A4212118C900A3A552 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8291212118C900A3A552 /* AVFoundation.framework */; };
+		B84B82A5212118C900A3A552 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8292212118C900A3A552 /* JavaScriptCore.framework */; };
+		B84B82A6212118C900A3A552 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8293212118C900A3A552 /* MessageUI.framework */; };
+		B84B82A7212118C900A3A552 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8294212118C900A3A552 /* libc++.tbd */; };
+		B84B82A8212118C900A3A552 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B8295212118C900A3A552 /* QuartzCore.framework */; };
+		B84B82AC21211B3900A3A552 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B82AB21211B3900A3A552 /* GoogleCast.framework */; };
+		B84B82AD21211B3900A3A552 /* GoogleCast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B84B82AB21211B3900A3A552 /* GoogleCast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8F51D082108EFE100B6F21A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51D072108EFE100B6F21A /* AppDelegate.swift */; };
 		B8F51D0D2108EFE100B6F21A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D0B2108EFE100B6F21A /* Main.storyboard */; };
 		B8F51D0F2108EFE200B6F21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F51D0E2108EFE200B6F21A /* Assets.xcassets */; };
@@ -29,7 +52,44 @@
 		B8FA3AD82111116F004C6D7F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA3AD72111116F004C6D7F /* Utils.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B84B82AE21211B3900A3A552 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B84B82AD21211B3900A3A552 /* GoogleCast.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B84B827C212114C400A3A552 /* OoyalaCastSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaCastSDK.framework; path = "../../vendor/Ooyala/OoyalaCastSDK-iOS/OoyalaCastSDK.framework"; sourceTree = "<group>"; };
+		B84B827D212114C400A3A552 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = ../../vendor/GoogleCast/GoogleCastSDK/GoogleCast.framework; sourceTree = "<group>"; };
+		B84B82812121151000A3A552 /* OOCastManagerFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOCastManagerFetcher.swift; sourceTree = "<group>"; };
+		B84B8283212118C700A3A552 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		B84B8284212118C800A3A552 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B84B8285212118C800A3A552 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B84B8286212118C800A3A552 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B84B8287212118C800A3A552 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B84B8288212118C800A3A552 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B84B8289212118C800A3A552 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		B84B828A212118C800A3A552 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		B84B828B212118C800A3A552 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		B84B828C212118C800A3A552 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B84B828D212118C800A3A552 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		B84B828E212118C800A3A552 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		B84B828F212118C800A3A552 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		B84B8290212118C900A3A552 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B84B8291212118C900A3A552 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B84B8292212118C900A3A552 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		B84B8293212118C900A3A552 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B84B8294212118C900A3A552 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B84B8295212118C900A3A552 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B84B82AB21211B3900A3A552 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = ../../vendor/GoogleCast/GoogleCastSDK/GoogleCast.framework; sourceTree = "<group>"; };
 		B8F51D042108EFE100B6F21A /* CustomControlsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomControlsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F51D072108EFE100B6F21A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8F51D0C2108EFE100B6F21A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +120,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84B8296212118C900A3A552 /* libstdc++.tbd in Frameworks */,
+				B84B8297212118C900A3A552 /* CFNetwork.framework in Frameworks */,
+				B84B82AC21211B3900A3A552 /* GoogleCast.framework in Frameworks */,
+				B84B8298212118C900A3A552 /* libz.tbd in Frameworks */,
+				B84B8299212118C900A3A552 /* Security.framework in Frameworks */,
+				B84B829A212118C900A3A552 /* CoreMedia.framework in Frameworks */,
+				B84B829B212118C900A3A552 /* Foundation.framework in Frameworks */,
+				B84B829C212118C900A3A552 /* MediaPlayer.framework in Frameworks */,
+				B84B829D212118C900A3A552 /* AVKit.framework in Frameworks */,
+				B84B829E212118C900A3A552 /* MediaAccessibility.framework in Frameworks */,
+				B84B829F212118C900A3A552 /* SystemConfiguration.framework in Frameworks */,
+				B84B82A0212118C900A3A552 /* Social.framework in Frameworks */,
+				B84B82A1212118C900A3A552 /* CoreText.framework in Frameworks */,
+				B84B82A2212118C900A3A552 /* libxml2.tbd in Frameworks */,
+				B84B82A3212118C900A3A552 /* AdSupport.framework in Frameworks */,
+				B84B82A4212118C900A3A552 /* AVFoundation.framework in Frameworks */,
+				B84B82A5212118C900A3A552 /* JavaScriptCore.framework in Frameworks */,
+				B84B82A6212118C900A3A552 /* MessageUI.framework in Frameworks */,
+				B84B82A7212118C900A3A552 /* libc++.tbd in Frameworks */,
+				B84B82A8212118C900A3A552 /* QuartzCore.framework in Frameworks */,
+				B84B827E212114C500A3A552 /* OoyalaCastSDK.framework in Frameworks */,
 				B8F51D1D2108F19C00B6F21A /* OoyalaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,9 +148,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B84B827B212114AD00A3A552 /* Cast */ = {
+			isa = PBXGroup;
+			children = (
+				B84B82812121151000A3A552 /* OOCastManagerFetcher.swift */,
+			);
+			path = Cast;
+			sourceTree = "<group>";
+		};
 		B8F51CFB2108EFE100B6F21A = {
 			isa = PBXGroup;
 			children = (
+				B84B82AB21211B3900A3A552 /* GoogleCast.framework */,
 				B8F51D062108EFE100B6F21A /* CustomControlsSampleApp */,
 				B8F51D052108EFE100B6F21A /* Products */,
 				B8F51D1B2108F19C00B6F21A /* Frameworks */,
@@ -87,6 +177,7 @@
 		B8F51D062108EFE100B6F21A /* CustomControlsSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				B84B827B212114AD00A3A552 /* Cast */,
 				B8F51D3621090F5300B6F21A /* Resources */,
 				B8F51D1E2108F1B200B6F21A /* Models */,
 				B8F51D192108F08900B6F21A /* SupportFiles */,
@@ -112,7 +203,28 @@
 		B8F51D1B2108F19C00B6F21A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B84B8290212118C900A3A552 /* AdSupport.framework */,
+				B84B8291212118C900A3A552 /* AVFoundation.framework */,
+				B84B828A212118C800A3A552 /* AVKit.framework */,
+				B84B8284212118C800A3A552 /* CFNetwork.framework */,
+				B84B8287212118C800A3A552 /* CoreMedia.framework */,
+				B84B828E212118C800A3A552 /* CoreText.framework */,
+				B84B8288212118C800A3A552 /* Foundation.framework */,
+				B84B827D212114C400A3A552 /* GoogleCast.framework */,
+				B84B8292212118C900A3A552 /* JavaScriptCore.framework */,
+				B84B8294212118C900A3A552 /* libc++.tbd */,
+				B84B8283212118C700A3A552 /* libstdc++.tbd */,
+				B84B828F212118C800A3A552 /* libxml2.tbd */,
+				B84B8285212118C800A3A552 /* libz.tbd */,
+				B84B828B212118C800A3A552 /* MediaAccessibility.framework */,
+				B84B8289212118C800A3A552 /* MediaPlayer.framework */,
+				B84B8293212118C900A3A552 /* MessageUI.framework */,
+				B84B827C212114C400A3A552 /* OoyalaCastSDK.framework */,
 				B8F51D1C2108F19C00B6F21A /* OoyalaSDK.framework */,
+				B84B8295212118C900A3A552 /* QuartzCore.framework */,
+				B84B8286212118C800A3A552 /* Security.framework */,
+				B84B828D212118C800A3A552 /* Social.framework */,
+				B84B828C212118C800A3A552 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +298,7 @@
 				B8F51D002108EFE100B6F21A /* Sources */,
 				B8F51D012108EFE100B6F21A /* Frameworks */,
 				B8F51D022108EFE100B6F21A /* Resources */,
+				B84B82AE21211B3900A3A552 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84B82822121151000A3A552 /* OOCastManagerFetcher.swift in Sources */,
 				B8F51D232108F20B00B6F21A /* BasicEmbedTokenGenerator.swift in Sources */,
 				B8F51D082108EFE100B6F21A /* AppDelegate.swift in Sources */,
 				B8F51D252108F24200B6F21A /* OptionDataSource.swift in Sources */,
@@ -407,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/VendorLibraries";
 				INFOPLIST_FILE = CustomControlsSampleApp/SupportFiles/CustomControlsSampleApp.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,6 +529,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_CFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.CustomControlsSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CustomControlsSampleApp/SupportFiles/CustomControlsSampleApp-Bridging-Header.h";
@@ -427,6 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/VendorLibraries";
 				INFOPLIST_FILE = CustomControlsSampleApp/SupportFiles/CustomControlsSampleApp.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,6 +551,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_CFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.CustomControlsSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CustomControlsSampleApp/SupportFiles/CustomControlsSampleApp-Bridging-Header.h";

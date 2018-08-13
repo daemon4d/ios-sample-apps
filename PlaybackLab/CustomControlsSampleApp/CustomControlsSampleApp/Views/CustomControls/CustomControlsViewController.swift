@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomControlsViewController: OOControlsViewController {
+class CustomControlsViewController: OOControlsViewController, OOCastManagerDelegate {
   
   private(set) var controlsType: OOOoyalaPlayerControlType!
   
@@ -17,8 +17,11 @@ class CustomControlsViewController: OOControlsViewController {
     }
   }
   
-  private let interval = 0.5
-  private var timerScrubber: Timer!
+  private var castManager: OOCastManager!
+  
+  private let interval = 0.1
+  private var timerSlider: Timer?
+  private var state: OOOoyalaPlayerState?
   
   override init(controlsType: OOOoyalaPlayerControlType, player: OOOoyalaPlayer!, overlay: UIView!, delegate: Any!) {
     super.init(controlsType: controlsType, player: player, overlay: overlay, delegate: delegate)
@@ -45,26 +48,38 @@ class CustomControlsViewController: OOControlsViewController {
       return
     }
     
+    castManager = OOCastManagerFetcher.fetchCastManager()
+    castManager.delegate = self
     
-    controls = CustomControls(frame: view.bounds, controlsType: controlsType)
+    player.initCastManager(castManager)
     
-    timerScrubber = Timer.scheduledTimer(timeInterval: TimeInterval(interval), target: self, selector: #selector(updateSliderTime), userInfo: nil, repeats: true)
+    controls = CustomControls(frame: view.bounds, castManager: castManager, controlsType: controlsType)
+    
     customControls.playPause.addTarget(self, action: #selector(playPause), for: .touchDown)
     customControls.fullscreen.addTarget(self, action: #selector(fullscreen), for: .touchDown)
-    customControls.sliderTime.addTarget(self, action: #selector(updateSliderTime), for: .allEvents)
-    
-    
+    customControls.sliderTime.addTarget(self, action: #selector(didStartDragging(sender:event:)), for: .valueChanged)
+        customControls.sliderTime.addTarget(self, action: #selector(test), for: .touchDown)
+
     super.viewDidLoad()
+  }
+  
+  @objc
+  private func test(){
+    print("TEEEST")
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     NotificationCenter.default.addObserver(self, selector: #selector(playerStateChanged), name:NSNotification.Name.OOOoyalaPlayerStateChanged, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(playerTimeChanged), name: NSNotification.Name.OOOoyalaPlayerTimeChanged, object: nil)
+    
+    timerSlider = Timer.scheduledTimer(timeInterval: TimeInterval(interval), target: self, selector: #selector(updateSliderTime), userInfo: nil, repeats: true)
   }
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
+    timerSlider?.invalidate()
+    timerSlider = nil
     NotificationCenter.default.removeObserver(self)
   }
   
@@ -82,25 +97,24 @@ class CustomControlsViewController: OOControlsViewController {
     }
   }
   
+  func currentTopUIViewController() -> UIViewController! {
+    var topController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController
+    while (topController?.presentedViewController != nil) {
+      topController = topController?.presentedViewController
+    }
+    return topController
+
+  }
+  
   @objc
   private func playerStateChanged(){
     if player != nil && controls != nil {
       DispatchQueue.main.async {
         self.customControls.title.text = self.player.currentItem?.title
-        
-        if self.customControls.sliderTime.maximumValue == 0 {
-          self.customControls.sliderTime.minimumValue = 0.0
-          self.customControls.sliderTime.maximumValue = Float(self.player.duration())
-          
-          self.customControls.playheadTime.text = "\(Utils.stringFromTimeInterval(interval: self.player.playheadTime())) - \(Utils.stringFromTimeInterval(interval: self.player.duration()))"
-          self.customControls.playheadTime.sizeToFit()
-        }
-        
+        self.customControls.playheadTime.text = "\(Utils.stringFromTimeInterval(interval: self.player.playheadTime())) - \(Utils.stringFromTimeInterval(interval: self.player.duration()))"
+        self.customControls.playheadTime.sizeToFit()
       }
       switch player.state() {
-      case .ready:
-        timerScrubber.fire()
-        break
       case .playing:
         DispatchQueue.main.async {
           self.customControls.playPause.setTitle("g", for: .normal)
@@ -124,12 +138,39 @@ class CustomControlsViewController: OOControlsViewController {
   
   @objc
   private func updateSliderTime(){
-    self.customControls.sliderTime.value = Float(self.player.playheadTime())
+    if controls != nil {
+      DispatchQueue.main.async {
+        let value = 100.0 * Float(self.player.playheadTime() / self.player.duration())
+        self.customControls.sliderTime.value = value
+        self.customControls.playheadTime.text = "\(Utils.stringFromTimeInterval(interval: self.player.playheadTime())) - \(Utils.stringFromTimeInterval(interval: self.player.duration()))"
+        self.customControls.playheadTime.sizeToFit()
+      }
+    }
   }
   
   @objc
-  private func touchSliderTime(_ slider: UISlider!, event: UIEvent!){
-    
+  private func didStartDragging(sender: UISlider, event: UIEvent){
+    if let touchEvent = event.allTouches?.first {
+      switch touchEvent.phase {
+      case .began, .stationary, .moved:
+        timerSlider?.invalidate()
+        timerSlider = nil
+        state = player.state()
+        player.pause()
+        break
+      case .ended:
+        let value = Float64(sender.value) * (player.duration() / 100.0)
+        player.seek(value)
+        if state == .playing {
+          player.play()
+        }
+        timerSlider = Timer.scheduledTimer(timeInterval: TimeInterval(interval), target: self, selector: #selector(updateSliderTime), userInfo: nil, repeats: true)
+        break
+      default:
+        timerSlider = Timer.scheduledTimer(timeInterval: TimeInterval(interval), target: self, selector: #selector(updateSliderTime), userInfo: nil, repeats: true)
+        break
+      }
+    }
   }
   
   @objc

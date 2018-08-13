@@ -9,5 +9,6 @@
 #define CustomControlsSampleApp_Bridging_Header_h
 
 #import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaCastSDK/OOCastManager.h>
 
 #endif /* CustomControlsSampleApp_Bridging_Header_h */

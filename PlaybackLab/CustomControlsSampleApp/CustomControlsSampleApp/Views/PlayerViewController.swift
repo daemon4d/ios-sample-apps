@@ -71,6 +71,10 @@ class PlayerViewController: UIViewController {
     
   }
   
+  func currentTopUIViewController() -> UIViewController! {
+    return UIViewController()
+  }
+  
   deinit {
     print("Deinit PlayerViewController")
   }

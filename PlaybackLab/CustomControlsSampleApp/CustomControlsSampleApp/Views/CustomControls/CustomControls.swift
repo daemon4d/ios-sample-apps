@@ -8,6 +8,8 @@
 import UIKit
 
 class CustomControls: UIView {
+  
+  private var castManager: OOCastManager!
 
   private(set) var isFullscreen = false
   private(set) var isAirplay = false
@@ -53,8 +55,9 @@ class CustomControls: UIView {
   private(set) var closedCaptions: UIButton!
   private var closedCaptionsItem: UIBarButtonItem!
   
-  init(frame: CGRect, controlsType: OOOoyalaPlayerControlType) {
+  init(frame: CGRect, castManager: OOCastManager, controlsType: OOOoyalaPlayerControlType) {
     super.init(frame: frame)
+    self.castManager = castManager
     autoresizingMask = [.flexibleWidth, .flexibleHeight]
     isFullscreen = controlsType == .fullScreen ? true : false
     
@@ -103,9 +106,10 @@ class CustomControls: UIView {
     airplay.setTitle("{", for: .normal)
     airplayItem = UIBarButtonItem(customView: airplay)
     
-    chromecast = UIButton(type: .custom)
+    /*chromecast = UIButton(type: .custom)
     chromecast.titleLabel?.font = ooyalaFont
-    chromecast.setTitle("}", for: .normal)
+    chromecast.setTitle("}", for: .normal)*/
+    chromecast = castManager.castButton()
     chromecastItem = UIBarButtonItem(customView: chromecast)
     
     playPause = UIButton(type: .custom)
@@ -116,9 +120,9 @@ class CustomControls: UIView {
     sliderTime = UISlider(frame: CGRect(x: 0, y: 0, width: frame.width, height: 25))
     sliderTime.autoresizingMask = [.flexibleWidth]
     sliderTime.setThumbImage(UIImage.createThumbImage(size: 25, color: .blue), for: .normal)
-    sliderTime.minimumValue = 0
-    sliderTime.maximumValue = 0
-    sliderTime.value = 0
+    sliderTime.minimumValue = 0.0
+    sliderTime.maximumValue = 100.0
+    sliderTime.value = 0.0
     sliderTimeItem = UIBarButtonItem(customView: sliderTime)
     
     volume = UIButton(type: .custom)
